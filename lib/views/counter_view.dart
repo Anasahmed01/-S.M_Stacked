@@ -14,6 +14,7 @@ class CounterView extends StatelessWidget {
             body: Center(
               child: SafeArea(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     const Text('counter value'),
                     ElevatedButton(
