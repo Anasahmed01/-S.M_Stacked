@@ -16,13 +16,17 @@ class CounterView extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Text('counter value'),
+                    Text(viewModel.counterServices.counterValue.toString()),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        viewModel.addValue();
+                      },
                       child: const Text('Add Value'),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        viewModel.navigateHomeView();
+                      },
                       child: const Text('Navigate to home page'),
                     ),
                   ],

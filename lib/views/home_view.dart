@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('counter value'),
+                    Text(viewModel.counterServices.counterValue.toString()),
                   ],
                 ),
               ),

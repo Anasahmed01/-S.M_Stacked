@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:stackedcappgg/views/counter_view.dart';
+import 'package:stacked_services/stacked_services.dart';
+import 'package:stackedcappgg/app/app.locator.dart';
+import 'package:stackedcappgg/app/app.router.dart';
 
-void main() {
+void main() async {
+  await setupLocator();
   runApp(const MyApp());
 }
 
@@ -10,9 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterView(),
+      navigatorKey: StackedService.navigatorKey,
+      onGenerateRoute: StackedRouter().onGenerateRoute,
     );
   }
 }
